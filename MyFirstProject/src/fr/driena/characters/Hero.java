@@ -8,14 +8,33 @@ public class Hero extends Personnage {
 	private String heroClass = "";
 	private ArrayList<Hero> heros;
 
+	/**
+	 * Constructeur de Hero
+	 * 
+	 * @param name : nom du hero
+	 * @param HP : vie du personnage
+	 * @param DEF : defance du personnage
+	 * @param ATQ : attaque du personange 
+	 * @param maxHP : vie max du personnage
+	 */
 	public Hero(String name, int HP, int DEF, int ATQ, int maxHP) {
 		super(name, HP, DEF, ATQ, maxHP);
 	}
-
+	
+	/**
+	 * Constructeur de Hero
+	 * 
+	 * @param heros
+	 */
 	public Hero(ArrayList<Hero> heros) {
 		this.heros = heros;
 	}
 
+	/**
+	 * Permet de crée les heros
+	 * 
+	 * @param nbHero : nombre de Hero a crée
+	 */
 	public void createHeros(int nbHero) {
 		if (nbHero > 0) {
 			
@@ -43,7 +62,13 @@ public class Hero extends Personnage {
 
 	}
 
-	public void creatClass(String heroClass, String heroName) {
+	/**
+	 * Permet de Crée le héro
+	 * 
+	 * @param heroClass : nom de la classe du hero
+	 * @param heroName : nom du hero
+	 */
+	private void creatClass(String heroClass, String heroName) {
 
 		if (heroClass.equalsIgnoreCase("Guerrier")) {
 			heros.add(new Guerrier(heroName));
@@ -62,6 +87,9 @@ public class Hero extends Personnage {
 		}
 	}
 
+	
+	/*Geter and Setter*/
+	
 	public String getHeroClass() {
 		return heroClass;
 	}

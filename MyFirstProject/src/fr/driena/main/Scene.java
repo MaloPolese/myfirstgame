@@ -7,7 +7,7 @@ import fr.driena.characters.Hero;
 
 public class Scene {
 
-	private ArrayList<Hero> heros;
+	private ArrayList<Hero> heros; //lisete de hero
 	private Hero hero;
 	private int nbHero;
 
@@ -23,16 +23,24 @@ public class Scene {
 		
 		heros.get(0).spellTest(null, 0);
 	}
-	
+	/**
+	 * Peret de saisire une valeur
+	 * 
+	 * @param str : message a afficher
+	 * @return
+	 */
 	public int saisie(String str){
 		Scanner sc = new Scanner(System.in);
 		System.out.println(str);
 		return sc.nextInt();
 	}
 	
+	/**
+	 * Permet d'afficher tous les heros de ta liste
+	 */
 	public void showHeroStats(){
 		for(Hero hero : heros){
-			hero.getStats();
+			hero.showStats();
 		}
 		
 	}

@@ -4,6 +4,11 @@ public class Voleur extends WithoutPM {
 
 	protected boolean isInvisible;
 
+	/**
+	 * Constructeur de Voleur
+	 * 
+	 * @param name
+	 */
 	public Voleur(String name) {
 		super(name, 70, 50, 70, 70);
 		isInvisible = false;

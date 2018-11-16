@@ -2,7 +2,11 @@ package fr.driena.characters;
 
 public class Pretre extends WithPM{
 
-	
+	/**
+	 * Constructeur de Pretre
+	 * 
+	 * @param name
+	 */
 	public Pretre(String name) {
 		super(name, 100, 150, 30, 15, 100, 150);
 	}
@@ -14,12 +18,13 @@ public class Pretre extends WithPM{
 		
 		
 	}
+
 	@Override
 	public void spell1(Personnage p, int cost) {
 		
 		Personnage attacked = p;
 		
-		if (!attacked.getDead()) {
+		if (!attacked.isDead()) {
 			if (isCriticalHit(0.4)) {
 				attacked.setHP(attacked.getHP() - 15);
 				System.out.println("Coup critique ! " + attacked.getNameP()
