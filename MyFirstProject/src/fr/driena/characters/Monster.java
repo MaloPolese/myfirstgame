@@ -1,4 +1,4 @@
-package Characters;
+package fr.driena.characters;
 
 public class Monster extends Personnage{
 	
